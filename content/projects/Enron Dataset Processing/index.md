@@ -24,30 +24,21 @@ highlights:
 ---
 
 ### Project Overview
-This project provides a detailed exploratory analysis of the Enron email dataset, highlighting key senders, communication patterns, and topical trends over time. The analysis demonstrates data cleaning, text processing, visualization, and basic network analysis skills.
+
+This project provides a detailed exploratory analysis of the Enron email dataset (~517,000 emails), aiming to uncover patterns in internal communication, key actors, and topical trends during the company's operational period. The analysis demonstrates core digital forensics skills including data ingestion, regex-based parsing, sanitation, and temporal visualization.
 
 ---
 
-#### 1. Installation and Setup
+## 1. Environment Setup
 
-Download the Enron dataset here: [Kaggle - Enron Email Dataset](https://www.kaggle.com/datasets/wcukierski/enron-email-dataset?resource=download)
-
-**Install required Python packages:**
+**Data Source:** [Kaggle - Enron Email Dataset](https://www.kaggle.com/datasets/wcukierski/enron-email-dataset?resource=download) 
+**Required Libraries:** To replicate this analysis, install the necessary Python packages:
 
 ```python
 pip install notebook pandas openpyxl
-python -m pip install matplotlib seaborn
-python -m pip install networkx
-```
+````
 
-**Launch Jupyter Notebook:**
-
-```
-python -m notebook
-```
-
-**Import libraries in a new notebook:**
-
+**Importing Libraries:** Setting up the environment for data processing and visualization:
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -59,9 +50,9 @@ sns.set_style("whitegrid")
 ```
 
 ---
-#### 2. Load Dataset
+## 2. Data Loading & Verification
 
-To begin with I had  to load the dataset (**emails.csv**)
+The raw dataset (**emails.csv**) is ingested using Pandas. Error handling is implemented to ensure file path integrity.
 
 ```python
 try:
@@ -72,17 +63,23 @@ except FileNotFoundError:
     print("Error: Could not find emails.csv. Please check the file name and location.")
 ```
 
-**Observations:**
+![[Enron Dataset Processing/Images/image1.png]]
+### Initial Observations
 
-- 517,401 emails with 4 columns: **file**, **message**, **from**, **subject**
-- **20,328 unique senders** and **158,949 unique subjects**
-
-<img src="Images/image1.png" style="margin-bottom: 5px;">
+* **Volume:** 517,401 total emails.
+* **Structure:** Contains 4 raw columns: **file**, **message**, **from**, **subject**.
+* **Scope:** 20,328 unique senders and 158,949 unique subjects, indicating a massive web of internal communication.
 
 ---
-#### 3. Data Cleaning and Extraction
+## 3. Data Cleaning & Feature Extraction
 
-I then extracted key fields from raw headers:
+Raw email headers require parsing to separate metadata from content. Regular Expressions (Regex) were used to extract clean fields for analysis.
+
+### Extraction Strategy
+
+* **Senders:** Extracted from the `From:` header.
+* **Timestamps:** Extracted `Date:` headers, cleaned timezone artifacts, and converted to UTC datetime objects.
+* **Subjects:** Isolated `Subject:` lines for content analysis.
 
 ```python
 import re
@@ -115,7 +112,7 @@ df['subject'] = (
 )
 ```
 
-**And then verified the extraction:** 
+### Verification of Cleaned Data
 
 ```python
 df[['date_raw','date','from','subject']].head()
@@ -124,7 +121,9 @@ df[['date_raw','date','from','subject']].head()
 <img src="Images/image2.png" style="margin-bottom: 5px;">
 
 ---
-#### 4. Top 5 senders over time
+## 4. Traffic Analysis: Top Senders
+
+Identifying key communicators is critical in forensic investigations to establish a "Person of Interest" list.
 
 ```python
 top5_senders = df['from'].value_counts().head(5).index
@@ -145,13 +144,15 @@ plt.show()
 
 <img src="Images/image3.png" style="margin-bottom: 5px;">
 
-**Observations:**
+### Forensic Insight
 
-- kay.mann@enron.com is the most frequent sender
-- Top 10 senders dominate a significant portion of email activity
+- **Key Actor:** kay.mann@enron.com is consistently the highest volume sender. Kay Mann was the head of legal for Enron, explaining the high volume of documentation and correspondence.
+* **Pattern:** The top 10 senders account for a disproportionate amount of traffic, a common pattern in corporate hierarchies (Pareto Principle).
 
 ---
-#### 5. Most Common Words in Subjects
+## 5. Content Analysis: Common Subjects
+
+To understand the organizational focus, the frequency of non-stop words within email subjects was analysed.
 
 ```python
 from collections import Counter
@@ -177,13 +178,15 @@ plt.show()
 
 <img src="Images/image4.png" style="margin-bottom: 5px;">
 
-**Observations:**
+### Observations
 
-- Words like **meeting**, **project**, **gas** dominate
-- Indicative of organizational focus and recurring topics
+* **Business Focus:** Words like "agreement", "meeting", "project", and "gas" dominate.
+* **Urgency:** The high frequency of "meeting" suggests a culture of heavy collaboration or bureaucracy.
 
 ---
-#### 6. Keyword Trends Over Time
+## 6. Temporal Analysis: Keyword Trends
+
+Tracking specific keywords over time can reveal when specific projects or crises occurred.
 
 ```python
 keywords = ['meeting','project','gas']
@@ -205,19 +208,24 @@ plt.show()
 
 <img src="Images/image5.png" style="margin-bottom: 5px;">
 
-**Observations:**
+### **Observations:**
 
-- Peaks correspond to company projects and critical events
+- **Activity Spike (2000–2001):** The dramatic increase in "meeting" and "gas" keywords between May 2000 and May 2001 correlates with the period of highest operational pressure and stock volatility prior to the company's collapse.
+- **Urgency Indicators:** The keyword "meeting" (blue line) tracks closely with "gas" (green line), suggesting that operational discussions about energy commodities were driving the need for increased internal coordination.
+- **Sudden Drop-off:** The sharp decline post-May 2001 warrants further investigation to determine if this represents a change in logging practices, a shift in communication channels, or a loss of data integrity.
+
 ---
-#### 7. Summary of Findings
+## 7. Summary of Findings
 
-1. **Dataset Overview:** Clean dataset, 517k emails, wide range of senders and subjects.
-2. **Top Senders:** `kay.mann@enron.com` dominates; top 10 senders handle a large volume.
-3. **Subject Analysis:** Frequent keywords reveal company focus (meetings, projects, gas).
-4. **Temporal Trends:** Keyword trends show peaks in organizational activity.
+* **Data Integrity:** Successfully ingested and cleaned ~517k emails, standardizing timestamps for timeline analysis.
+* **Actor Identification:** Identified `kay.mann@enron.com` as a primary node of communication.
+* **Contextual Awareness:** Subject line analysis confirmed "gas" and "legal agreements" as the primary business drivers.
+* **Timeline Reconstruction:** Established a timeline of communication volume that can be mapped against external events (e.g., stock prices or public announcements).
 
 ---
 ### Key Outcomes
 
-
+* **eDiscovery Readiness:** Demonstrated the ability to process unstructured text data (email headers/bodies) into structured formats suitable for legal review.
+* **Pattern Recognition:** Applied statistical analysis to identify anomalies in communication volume and subject matter.
+* **Python for Forensics:** Utilized Pandas and Regex to automate the parsing of large-scale datasets, a critical skill for handling modern digital evidence.
 

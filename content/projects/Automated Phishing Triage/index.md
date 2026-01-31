@@ -25,10 +25,7 @@ duration: 2 months
 team_size: 5
 highlights:
 ---
----
-###  Project Overview
 
-Phishing investigations are often repetitive and time-consuming. In this project, I utilized **Tines**, a Security Orchestration, Automation, and Response (SOAR) platform, to build an automated workflow. The goal was to eliminate manual reputation checks by automatically analysing suspicious URLs against threat intelligence feeds.
 
 ---
 ### Technical Implementation
