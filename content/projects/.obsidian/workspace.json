@@ -1,0 +1,237 @@
+{
+  "main": {
+    "id": "009792e771584c1a",
+    "type": "split",
+    "children": [
+      {
+        "id": "4cf1d4f2427f2721",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fb9a06f3f38945d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud Honeypot/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          },
+          {
+            "id": "6b8ba3f5961193fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Automated Phishing Triage/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "92eb147dc5710a16",
+    "type": "split",
+    "children": [
+      {
+        "id": "cc5a285e5c5235df",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "18586c721063ee03",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7100f66ee67b8076",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6803dc56fac7d3f6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "83114f4131b89e1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "1dbddb231506f30b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c148146d7d1e4d73",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Automated Azure Compliance Monitor/index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for index"
+            }
+          },
+          {
+            "id": "ee094f1e2270228d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Automated Azure Compliance Monitor/index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from index"
+            }
+          },
+          {
+            "id": "f9f7cf8e2b14c878",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "af9486ccce27b1ed",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "9aa036264a5c956c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Automated Azure Compliance Monitor/index.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of index"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "6b8ba3f5961193fe",
+  "lastOpenFiles": [
+    "Enron Dataset Processing/index.md",
+    "Enron Dataset Processing/featured.png",
+    "Wazuh-SIEM-Detection-Lab/index.md",
+    "Remediation Plan Zellis/index.md",
+    "Cloud Honeypot/index.md",
+    "Automated Phishing Triage/index.md",
+    "Automated Phishing Triage/Images/image1.png",
+    "Remediation Plan Zellis/featured.png",
+    "Remediation Plan Zellis/featured.jpg",
+    "2024-09-20.md",
+    "Enron Dataset Processing/Images/image2.png",
+    "Enron Dataset Processing/Images/image3.png",
+    "Enron Dataset Processing/Images/image5.png",
+    "_index.md",
+    "2024-11-15.md",
+    "Automated Phishing Triage/featured.jpeg",
+    "Cloud Honeypot/featured.png",
+    "Cloud Honeypot/Images",
+    "Automated Phishing Triage/Images",
+    "Wazuh-SIEM-Detection-Lab/Images",
+    "Cloud Honeypot/Untitled.md",
+    "Cloud Honeypot",
+    "Phishing Email Analysis & Detection Lab/index.md",
+    "Automated Phishing Triage",
+    "Insider Threat USB/index.md",
+    "Insider%20Threat%20USB/Images/image1.png.png.md",
+    "Insider%20Threat%20USB/Images",
+    "Insider%20Threat%20USB",
+    "Insider Threat USB/Images",
+    "Enron Dataset Processing/Images",
+    "Phishing Email Analysis & Detection Lab",
+    "GRC Project copy/index.md",
+    "uploads/report.pdf.md"
+  ]
+}

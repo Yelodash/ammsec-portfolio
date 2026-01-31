@@ -1,0 +1,133 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+
+name:
+  display: Moustapha Antoine Mindaoudou
+  given: Moustapha Antoine
+  family: Mindaoudou
+
+postnominals:
+  - "MSc Cyber (Blue Team (BTL1), GRC & eDiscovery | Security+ | Relativity RCP)"
+  - "Security+"
+  - "BTL1"
+  - "SC-900"
+  - "Relativity RCP"
+
+status:
+  icon: "" 
+
+role: "MSc Cybersecurity Student · Blue Team, GRC & eDiscovery"
+
+email: "antoinemindaoudou@gmail.com"
+
+bio: |
+  MSc Cybersecurity student passionate about security, risk, and data protection.
+
+affiliations:
+  - name: Manchester Metropolitan University
+    url: https://www.mmu.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:antoinemindaoudou@gmail.com
+    label: Email
+  - icon: brands/github
+    url: https://github.com/Yelodash
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/moustapha-antoine-mindaoudou-6123311a3/
+
+interests:
+  - Blue Team & Defensive Security
+  - Governance, Risk & Compliance (GRC)
+  - eDiscovery & Legal Technology
+  - Cloud & Identity Security
+  - Digital Forensics & Incident Response
+
+education:
+  - degree: MSc Cyber Security
+    institution: Manchester Metropolitan University
+    start: 2025-09-01
+    end: 2026-09-30
+    summary: |
+      Postgraduate degree in Cyber Security with a focus on defensive security, governance, risk and compliance,
+      and applied research.
+
+  - degree: BSc (Hons) Games Design and Production
+    institution: University of Salford
+    start: 2022-09-01
+    end: 2025-06-30
+    summary: |
+      Undergraduate degree in Games Design and Production, building skills in design thinking, systems design,
+      creative problem-solving, and delivering projects in multidisciplinary teams.
+
+  - degree: Game and Interactive Media Design
+    institution: The Manchester College
+    start: 2021-09-01
+    end: 2022-09-01
+    summary: |
+      Developed logic, systems thinking, and scripting skills (C#) essential for application security. Experience working in agile multidisciplinary teams and rigorous software testing.
+
+experience:
+- role: Front Desk Receptionist / Sales Associate
+  org: Forest Sofa Limited
+  start: 2022-12-01
+  end: 2025-06-01
+  summary: |
+    Provided professional front-desk and customer service support, managing inquiries and appointments efficiently. Handled sales transactions and inventory tracking, ensuring accurate documentation of all operations. Maintained records and logs in compliance with company policies, supporting operational governance. Assisted management with administrative tasks, internal reporting, and team coordination. Developed strong organizational, communication, and problem-solving skills transferable to risk and compliance roles.
+
+
+
+
+
+skills:
+  - name: Blue Team & Security
+    items:
+      - label: Security Operations Fundamentals
+        level: 4
+      - label: Incident Response Basics
+        level: 4
+      - label: Vulnerability Management (Qualys)
+        level: 3
+
+  - name: GRC & Compliance
+    items:
+      - label: Cyber Risk Management
+        level: 4
+      - label: Governance & Policy
+        level: 3
+      - label: Identity & Access Management
+        level: 3
+      - label: Data Protection & DLP
+        level: 3
+
+  - name: eDiscovery & Legal Tech
+    items:
+      - label: Relativity (RCP)
+        level: 4
+      - label: Microsoft Purview (Retention/eDiscovery)
+        level: 3
+      - label: Documentation & Case Support
+        level: 4
+
+  - name: Technical
+    items:
+      - label: Linux
+        level: 3
+      - label: Python (basic scripting)
+        level: 3
+      - label: SQL / MySQL basics
+        level: 3
+      - label: Windows & Active Directory fundamentals
+        level: 3
+
+languages:
+  - name: English
+    level: 5
+    label: Fluent
+  - name: French
+    level: 5
+    label: Fluent
+
+awards: []
+
