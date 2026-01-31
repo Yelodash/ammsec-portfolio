@@ -1,6 +1,6 @@
 ---
 title: Remediation Plan - CVE-2023-34362
-date: 2024-11-15
+date: 2025-11-03
 summary: A comprehensive GRC remediation strategy addressing the MOVEit Transfer breach, including root cause analysis, risk quantification, and ISO 27001 control mapping.
 tags:
   - GRC

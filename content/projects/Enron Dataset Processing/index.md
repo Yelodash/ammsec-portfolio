@@ -1,6 +1,6 @@
 ---
 title: Enron Dataset Processing
-date: 2024-11-15
+date: 2025-04-05
 summary: This project explores the Enron email dataset (~517,000 emails) to uncover patterns in internal communication.
 tags:
   - eDiscovery
@@ -20,7 +20,6 @@ role: Student
 duration: 4 months
 team_size: 2
 highlights:
-
 ---
 
 ### Project Overview

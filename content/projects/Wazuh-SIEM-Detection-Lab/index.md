@@ -1,6 +1,6 @@
 ---
 title: "SIEM Implementation: Wazuh Threat Detection Lab"
-date: 2024-06-10
+date: 2025-02-03
 summary: Deployed a localized SOC environment using Wazuh to detect brute-force attacks and monitor endpoint security events
 tags:
   - Forensics

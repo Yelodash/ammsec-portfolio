@@ -1,6 +1,6 @@
 ---
 title: Azure Cloud Honeypot & Threat Analysis
-date: 2024-06-10
+date: 2025-07-09
 summary: Deployed a vulnerable Azure Virtual Machine to simulate a honeypot, aggregating and analyzing live brute-force attacks from the open internet.
 tags:
   - Cloud
@@ -9,18 +9,17 @@ tech_stack:
   - Microsoft Azure
   - Azure Virtual Machines
   - Network Security Groups (NSG)
-  - Windows 
+  - Windows
   - RDP
   - Windows Event Viewer
   - Kali Linux
   - NetExec
 featured: true
 status: Live
-role: 
+role:
 duration: 3 weeks
 team_size: 1
 highlights:
-
 ---
 
 ### Project Overview

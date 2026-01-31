@@ -30,9 +30,6 @@ affiliations:
     url: https://www.mmu.ac.uk/
 
 links:
-  - icon: at-symbol
-    url: mailto:antoinemindaoudou@gmail.com
-    label: Email
   - icon: brands/github
     url: https://github.com/Yelodash
   - icon: brands/linkedin

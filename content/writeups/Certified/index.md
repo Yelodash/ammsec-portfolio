@@ -1,6 +1,6 @@
 ---
 title: Certified Lab from HTB
-date: 2024-12-10
+date: 2025-05-15
 summary: Medium-difficulty Windows machine designed around an breach scenario.
 tags:
   - ESC9
@@ -13,6 +13,7 @@ tech_stack: S
 authors:
   - me
 featured: true
+show_date:
 ---
 
 ---
