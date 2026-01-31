@@ -10,7 +10,7 @@ tech_stack:
   - Windows endpoint
   - PowerShell
   - Log analysis
-featured: false
+featured: true
 status: Live
 role: Solo Developer
 duration: 3 weeks
