@@ -18,7 +18,5 @@ main:
   - name: Contact
     url: /#contact
     weight: 50
-  - name: Tools
-    url: /#tools
-    weight: 50
+  
  

@@ -34,7 +34,7 @@ hugoblox:
     # Mode: 'light', 'dark', or 'system' (follows OS preference)
     mode: dark
     # Theme pack: name from data/themes/ or { light: "x", dark: "y" } for mix-and-match
-    pack: "Matcha"
+    pack: "Default"
     # Optional: Override theme pack colors
     colors:
       primary: ""                       # Tailwind palette name or hex (e.g., "indigo" or "#6366f1")
@@ -89,9 +89,9 @@ hugoblox:
     # Menu alignment
     align: center                       # left | center | right
     # Feature toggles
-    search: true
-    theme_toggle: true
-    theme_picker: true
+    search: false
+    theme_toggle: false
+    theme_picker: false
     language_switcher: false
     # Call-to-action button
     cta:
