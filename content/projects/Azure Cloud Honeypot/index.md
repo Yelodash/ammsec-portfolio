@@ -1,5 +1,5 @@
 ---
-title: Azure Cloud Honeypot & Threat Analysis
+title: Azure Cloud Honeypot
 date: 2025-07-09
 summary: Deployed a vulnerable Azure Virtual Machine to simulate a honeypot, aggregating and analyzing live brute-force attacks from the open internet.
 tags:
