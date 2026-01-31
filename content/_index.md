@@ -62,9 +62,9 @@ sections:
           tag: '*'
         - name: GRC & Risk Management
           tag: GRC  
-        - name: eDiscovery & Legal Tech
+        - name: eDiscovery 
           tag: eDiscovery
-        - name: Cloud & Identity Security
+        - name: Cloud 
           tag: Cloud
         - name: Digital Forensics
           tag: Forensics

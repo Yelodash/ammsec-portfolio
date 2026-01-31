@@ -16,6 +16,9 @@ featured: true
 ---
 
 ---
+### Overview
+
+This medium-difficulty box focused on exploiting weaknesses in misconfigured Active Directory Certificate Services (AD CS), combined with access control list (ACL) abuse to progress through the attack path.
 
 ## 1. Reconnaissance
 

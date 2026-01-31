@@ -27,59 +27,68 @@ duration: 4 months
 team_size: 2
 highlights:
 ---
----
-### Project Overview
+### Executive Summary
 
-Created a **practice remediation plan** based on a simulated cyber incident affecting a payroll and HR services provider, inspired by the real-world MOVEit Transfer vulnerability (CVE-2023-34362).
+In this scenario-based case study, I developed a comprehensive **Remediation Plan** addressing a supply chain compromise within a critical HR & Payroll provider. Modeled after the real-world **MOVEit Transfer vulnerability (CVE-2023-34362)**, this project simulates the post-incident response phase required by GRC teams.
 
-This project was completed **for learning and portfolio purposes only**. All figures, costs, timelines, and scenarios are **fictitious** and were used solely to demonstrate structured cybersecurity and risk management skills.
+The objective was to translate technical failure into a **business-focused strategic roadmap**, demonstrating the ability to manage risk, ensure regulatory compliance (UK GDPR), and restore operational resilience.
 
-The work showcases my ability to translate a complex cyber incident into a **clear, business-focused remediation plan**, covering governance, risk, compliance, and control improvement in a regulated HR and payroll environment.
-
----
-#### 1. Key Highlights
-
-- **Root Cause Analysis**  
-    Identified people, process, and technology weaknesses that contributed to the simulated breach.
-- **Threat & Asset Mapping**  
-    Linked critical business assets (payroll systems, file-transfer platforms, identity systems) to relevant cyber threats in a clear and structured way.
-- **Risk Assessment & Prioritisation**  
-    Applied recognised industry standards (ISO 27005 and CVSS) to assess risk severity and prioritise remediation actions.
-- **Control Design & Oversight**  
-    Designed practical security controls such as multi-factor authentication, role-based access, patch management, security monitoring, and supplier assurance, with measurable KPIs for accountability.
-- **Business Impact Analysis**  
-    Demonstrated how improved controls reduce financial, operational, and regulatory risk using both qualitative and quantitative methods.
-- **Continuous Improvement**  
-    Embedded lessons learned into an ongoing review cycle to ensure long-term improvement rather than one-off fixes.
-
----
-#### 2.Results
-
-- **Reduced Risk Exposure**  
-    High-risk scenarios were reduced to acceptable levels through targeted controls.
-- **Improved Operational Resilience**  
-    Stronger monitoring, access controls, and supplier governance help protect sensitive payroll and HR data.
-- **Regulatory Alignment**  
-    Approach aligned with ISO 27001 principles and UK GDPR Article 32 expectations.
-- **Measurable Improvements**  
-    Examples include full adoption of multi-factor authentication, improved patch compliance, and significantly faster incident detection times.
-
----
-### Skills Demonstrated
-
-- Governance, Risk & Compliance (GRC)
-- Cyber Risk Assessment & Analysis
-- Incident Response Planning
-- Control Design & Effectiveness Measurement
-- Business-Focused Cybersecurity Reporting**
+**Frameworks Applied:** ISO 27001, ISO 27005 (Risk Management), NIST CSF, CIS Controls v8.
 
 ---
 
-<div style="text-align: center;">
-  <strong>Link to the report:</strong><br>
-  <a href="uploads/remediation.pdf">View document</a>
+## 1. Methodology & Approach
+
+#### **Root Cause Analysis (RCA)**
+I moved beyond the technical exploit to identify the organizational failures that allowed the breach to occur.
+* **People:** Lack of security awareness regarding third-party file transfer risks.
+* **Process:** Failure in the Vendor Risk Management (VRM) lifecycle and delayed patch management policies.
+* **Technology:** Absence of network segmentation for critical assets and insufficient EDR coverage.
+
+#### **Threat & Asset Modelling**
+I mapped critical business assets (Payroll Databases, Identity Management Systems) against relevant threat actors using a structured matrix. This ensured that the most valuable data received the highest priority for protection.
+
+#### **Risk Quantification**
+Using **ISO 27005** methodologies and **CVSS** scoring, I assessed the inherent risk of unpatched systems versus the residual risk after control implementation. This quantitative approach allows stakeholders to see the "Return on Security Investment" (ROSI).
+
+---
+
+## 2. Strategic Control Implementation
+
+I designed a remediation roadmap focusing on immediate stabilization and long-term governance.
+
+| Domain | Control Implemented | KPI for Success |
+| :--- | :--- | :--- |
+| **Identity Security** | Enforced Phishing-Resistant MFA & RBAC | 100% MFA adoption rate for admin accounts. |
+| **Vulnerability Mgmt** | Automated Patching Cycles (72h SLA for Critical) | <48h Mean Time to Remediate (MTTR). |
+| **Supplier Assurance** | New Vendor Risk Assessment Framework | 100% of Tier-1 vendors audited annually. |
+| **Monitoring** | SIEM Log Ingestion for File Transfer Activity | <1 hour detection time for anomalous data egress. |
+
+---
+
+## 3. Business Impact Analysis
+
+Effective GRC requires speaking the language of the business. I analyzed the impact of the controls on operations:
+* **Financial Risk:** Reduced potential regulatory fines (GDPR 4% turnover) by demonstrating "State of the Art" security measures.
+* **Operational Resilience:** Transitioned from a "Fragile" state to a "Resilient" state by implementing redundant backups and tested Incident Response (IR) playbooks.
+* **Compliance Alignment:** Ensured the new architecture aligns with **UK GDPR Article 32** (Security of Processing) and **ISO 27001 Annex A controls**.
+
+---
+
+### Key Competencies Demonstrated
+
+* **Governance & Strategy:** Ability to author policy and remediation plans that align with business goals.
+* **Risk Management:** Proficiency in translating technical vulnerabilities (CVEs) into business risk registers.
+* **Regulatory Knowledge:** Application of GDPR and ISO standards in a practical, recovery-focused scenario.
+* **Control Design:** Developing SMART (Specific, Measurable, Achievable, Relevant, Time-bound) security controls.
+
+---
+
+### Full Remediation Report
+
+<div style="text-align: center; margin-top: 20px;">
+    <object data="/uploads/remediation.pdf" type="application/pdf" width="100%" height="600px" style="border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p>Your browser does not support PDF previews.</p>
+        <a href="/uploads/remediation.pdf" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">Download PDF</a>
+    </object>
 </div>
-
----
-
-

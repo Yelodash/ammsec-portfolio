@@ -23,49 +23,36 @@ highlights:
 
 ---
 
-## Project Overview
+### Project Overview
 
-In this project, I deployed a purposely vulnerable "Honeypot" in Microsoft Azure to monitor unauthorized access attempts. The goal was to observe real-world attack patterns, analyze the speed of automated botnets, and practice log analysis using Windows Event Viewer.
+In this project, I deployed a purposely vulnerable "Honeypot" in Microsoft Azure to monitor unauthorized access attempts and brute-force campaigns. The objective was to observe real-world attack vectors, analyse the velocity of automated botnets, and practice host-based forensics using Windows Event Logs.
 
 ---
+## 1. Infrastructure Deployment
 
-### Technical Implementation
+I provisioned a **Windows 10 Virtual Machine** within the Azure ecosystem. To ensure the instance acted as an effective target, I intentionally configured the environment to be non-compliant with standard hardening practices:
 
-#### 1. Infrastructure Deployment
-
-I provisioned a **Windows 10 Virtual Machine** in Azure. To ensure the instance acted as an effective honeypot, I configured the internal security settings to be non-compliant with standard hardening practices:
-
-* **Host:** Azure Standard B-Series VM.
-* **OS:** Windows 10 Pro.
-* **Internal Firewall:** Completely disabled (Domain, Private, and Public profiles set to OFF) to ensure ICMP and RDP reachability.
-
+* **Host Type:** Azure Standard B-Series VM. 
+* **Operating System:** Windows 10 Pro. 
+* **Network Posture:** Publicly addressable IP with no edge filtering.
 <img src="Images/image1.png" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 5px;">
 
 ---
 
-#### 2. Network Security Configuration (The "Bait")
+## 2. Security Configuration (The "Bait")
 
-I modified the Azure **Network Security Group (NSG)** to expose the machine to the public internet. I created a custom inbound rule (ALL_INBOUND_TRAFFIC`) allowing traffic from **Any Source** on **Any Port**, effectively removing the cloud-layer firewall.
+**External Network Layer:** I modified the Azure **Network Security Group (NSG)** to expose the machine to the open internet. I created a custom inbound rule (`ALL_INBOUND_TRAFFIC`) allowing ingress traffic from **Any Source** on **Any Port**, effectively removing the cloud-layer firewall.
 <img src="Images/image2.png" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 5px;">
-
-connected on the machine with RDP by Downloading the RDP file and putting the password
+**Internal Host Layer:** After provisioning, I established an administrative session via RDP to configure internal security policies. Using the Windows Firewall console (`wf.msc`), I systematically disabled all firewall profiles (Domain, Private, and Public) to ensure ICMP echo requests and RDP traffic could reach the kernel.
 
 <img src="Images/image3.png" style="margin-bottom: 5px;">
-
-then opened firewall rules:
-
-```
-wf.msc
-```
-
-and put the domain / private / public to off
 
 <img src="Images/image4.png" style="margin-bottom: 5px;">
 
 ---
-#### 3. Attack Simulation
+## 3. Attack Simulation & Validation
 
-To validate the monitoring pipeline before live internet traffic arrived, I executed a controlled brute-force attack against the honeypot using **Kali Linux**. I utilized `netexec` to simulate a credential stuffing attack against the RDP service (Port 3389).
+To validate the monitoring pipeline before exposing the host to live internet traffic, I executed a controlled brute-force attack against the honeypot using **Kali Linux**. I utilized `NetExec` (formerly CrackMapExec) to simulate a credential stuffing attack against the RDP service (Port 3389).
 
 ``` bash
 netexec rdp 20.199.11.62  -u 'root' -p 'root'
@@ -73,37 +60,31 @@ netexec rdp 20.199.11.62  -u 'root' -p 'root'
 
 <img src="Images/image5.png" style="margin-bottom: 5px;">
 
- The attack successfully triggered a `STATUS_LOGON_FAILURE` response, confirming that the authentication request bypassed the network firewalls and reached the internal OS.
+**Result:** The attack successfully triggered a `STATUS_LOGON_FAILURE` response, confirming that the authentication request bypassed the network perimeters and interacted with the internal OS authentication mechanism.
 
 ---
+## 4. Log Analysis & Detection
 
-#### 4.  Log Analysis & Detection 
+Inside the VM, I utilized **Windows Event Viewer** to conduct host-based analysis. The brute-force attempts generated specific forensic artifacts:
 
-Inside the VM, I utilized **Windows Event Viewer** to capture the telemetry. The brute-force attempts generated **Event ID 4625 (An account failed to log on)**.
-
-**Evidence of Compromise Attempts:** The logs captured the attacker's IP address, the targeted username (`root`), and the timestamp of the attack, proving the visibility of the logging pipeline.
+- **Event ID:** 4625 (An account failed to log on).
+- **Log Source:** Security.
 
 <img src="Images/image6.png" style="margin-bottom: 5px;">
 
 ---
+### Critical Analysis: Production vs. Lab
 
-### Key Limitations
+While this project successfully demonstrated the mechanics of a honeypot, a production-grade deployment would require significant architectural changes to meet GRC standards:
 
-While this project successfully demonstrated the mechanics of a honeypot, a production-grade deployment would require:
-
-1. **Log Forwarding:** In a real enterprise environment, these logs (Event 4625) should be forwarded to a centralized SIEM (like Azure Sentinel or Splunk) rather than staying on the local disk.
-
-2. **Isolation:** This VM was placed in a default subnet. A true honeypot should be strictly isolated in a DMZ or a separate Virtual Network (VNet) to prevent "lateral movement" if an attacker successfully compromises the machine.
-
-3. **Emulation:** This was a "High Interaction" honeypot (a real OS). Production honeypots often use emulation software (like T-Pot or Cowrie) to simulate services without the risk of running a full operating system.
+1. **Log Forwarding:** In a real enterprise environment, local logs (Event 4625) are volatile. They must be forwarded to a centralized SIEM (like **Azure Sentinel** or **Splunk**) to ensure data immutability and correlation.
+2. **Network Isolation:** This VM was placed in a default subnet. A production honeypot must be strictly isolated in a DMZ or a separate Virtual Network (VNet) to prevent **lateral movement** if an attacker successfully compromises the machine.
+3. **Emulation vs. Interaction:** This was a "High Interaction" honeypot (a real OS). Production environments often use emulation software (like **T-Pot** or **Cowrie**) to simulate services, reducing the risk of providing an attacker with a fully functional computing resource.
 
 ---
-
 ### Key Outcomes
 
-* **Cloud Infrastructure Management:** Successfully deployed and configured a custom Azure Virtual Machine and manipulated Network Security Groups (NSGs) to create a controlled vulnerability environment.
-* **Red Team Simulation:** Gained hands-on experience with offensive security tools (**Kali Linux**, **NetExec**) to simulate real-world brute-force attacks and validate network reachability.
-* **Blue Team Log Analysis:** developed proficiency in Windows Event Forensics, specifically identifying **Event ID 4625** to correlate network traffic with authentication failures.
-* **Attack Chain Visualization:** Validated the complete attack lifecycle, monitoring how external threats traverse cloud firewalls to impact internal operating system logs.
-
-
+- **Cloud Infrastructure Management:** Successfully deployed and configured a custom Azure Virtual Machine and manipulated Network Security Groups (NSGs) to create a controlled vulnerability environment.
+- **Red Team Simulation:** Gained hands-on experience with offensive security tools (**Kali Linux**, **NetExec**) to simulate real-world brute-force attacks and validate network reachability.
+- **Blue Team Log Analysis:** Developed proficiency in Windows Event Forensics, specifically identifying **Event ID 4625** to correlate network traffic with authentication failures.
+- **Attack Chain Visualization:** Validated the complete attack lifecycle, monitoring how external threats traverse cloud firewalls to impact internal operating system logs.
