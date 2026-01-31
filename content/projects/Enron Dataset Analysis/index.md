@@ -1,5 +1,5 @@
 ---
-title: Enron Dataset Processing
+title: Enron Dataset Analysis
 date: 2025-04-05
 summary: This project explores the Enron email dataset (~517,000 emails) to uncover patterns in internal communication.
 tags:
@@ -62,7 +62,7 @@ except FileNotFoundError:
     print("Error: Could not find emails.csv. Please check the file name and location.")
 ```
 
-![[Enron Dataset Processing/Images/image1.png]]
+![[Enron Dataset Analysis/Images/image1.png]]
 ### Initial Observations
 
 * **Volume:** 517,401 total emails.
