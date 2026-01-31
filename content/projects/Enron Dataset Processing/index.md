@@ -4,6 +4,7 @@ date: 2024-11-15
 summary: This project explores the Enron email dataset (~517,000 emails) to uncover patterns in internal communication.
 tags:
   - eDiscovery
+  - Forensics
 tech_stack:
   - Python
   - Pandas 
@@ -19,8 +20,9 @@ role: Student
 duration: 4 months
 team_size: 2
 highlights:
+
 ---
----
+
 ### Project Overview
 This project provides a detailed exploratory analysis of the Enron email dataset, highlighting key senders, communication patterns, and topical trends over time. The analysis demonstrates data cleaning, text processing, visualization, and basic network analysis skills.
 

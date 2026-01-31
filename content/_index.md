@@ -180,7 +180,7 @@ sections:
               icon: custom/relativity
             - name: "Google Cybersecurity Specialization"
               icon: devicon/google
-            - name: "OSCP (In progresss)"
+            - name: "OSCP (In progress)"
               icon: custom/oscp
 
     design:

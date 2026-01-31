@@ -4,26 +4,25 @@ date: 2024-06-10
 summary: Deployed a vulnerable Azure Virtual Machine to simulate a honeypot, aggregating and analyzing live brute-force attacks from the open internet.
 tags:
   - Cloud
+  - Forensics
 tech_stack:
   - Microsoft Azure
   - Azure Virtual Machines
   - Network Security Groups (NSG)
-  - Windows 10
+  - Windows 
   - RDP
   - Windows Event Viewer
   - Kali Linux
   - NetExec
 featured: true
 status: Live
-role: Solo Developer
+role: 
 duration: 3 weeks
 team_size: 1
 highlights:
-  - PWA with offline support
-  - 5000+ monthly active users
-  - "Lighthouse score: 100"
+
 ---
----
+
 ## Project Overview
 
 In this project, I deployed a purposely vulnerable "Honeypot" in Microsoft Azure to monitor unauthorized access attempts. The goal was to observe real-world attack patterns, analyze the speed of automated botnets, and practice log analysis using Windows Event Viewer.
