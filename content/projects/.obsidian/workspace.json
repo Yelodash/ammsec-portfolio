@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Azure Cloud Honeypot/index.md",
+                "file": "Automated Phishing Triage/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -198,23 +198,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "18586c721063ee03",
+  "active": "6b8ba3f5961193fe",
   "lastOpenFiles": [
-    "Enron Dataset Analysis/index.md",
     "Wazuh-SIEM-Detection-Lab/index.md",
     "Remediation Plan - CVE-2023-34362/index.md",
+    "Automated Phishing Triage/index.md",
+    "Azure Cloud Honeypot/index.md",
+    "Enron Dataset Analysis/index.md",
     "Wazuh-SIEM-Detection-Lab/featured.jpg",
     "Enron Dataset Processing/unnamed (4).jpg",
     "Remediation Plan - CVE-2023-34362/featured.jpg",
     "Enron Dataset Analysis/featured.jpg",
     "Enron Dataset Analysis/featured.jpg",
-    "Automated Phishing Triage/index.md",
     "Azure Cloud Honeypot/featured.jpg",
     "Automated Phishing Triage/featured.jpg",
     "Cloud Honeypot/unnamed.jpg",
     "Automated Phishing Triage/featured.jpg",
     "Wazuh-SIEM-Detection-Lab/featured.jpg",
-    "Azure Cloud Honeypot/index.md",
     "_index.md",
     "2024-09-20.md",
     "2024-11-15.md",

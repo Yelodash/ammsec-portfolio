@@ -20,12 +20,12 @@ sections:
       show_scroll_indicator: true
       typewriter:
         enable: true
-        prefix: "Skills in"
+        prefix: "Specialising in"
         strings:
-          - "Governance, Risk & Compliance"
-          - "eDiscovery & Legal Tech"
-          - "Identity & Cloud Security"
-          - "Risk-Aware Security Operations"
+          - "Information Rights & Data Protectione"
+          - "Regulatory Policy & Governance"
+          - "Risk Assessment & ISO 27001"
+          - "Strategic Research & Analysis"
         type_speed: 70
         delete_speed: 40Foresnsics
         pause_time: 2500
@@ -90,8 +90,8 @@ sections:
   - block: tech-stack
     id: skills
     content:
-      title: "Security & Technology Stack"
-      subtitle: "DFIR, eDiscovery, GRC, and Security Awareness & Risk Context"
+      title: "Expertise & Regulatory Tools"
+      subtitle: "Bridging the gap between technical security and information rights"
       categories:
       - name: Blue Team & Incident Response
         items:
@@ -104,7 +104,7 @@ sections:
           - name: Incident Response 
             icon: custom/incident
 
-      - name: GRC & Identity Security
+      - name: Governance & Regulation
         items:
           - name: Risk Management & GRC
             icon: custom/risk
@@ -180,8 +180,6 @@ sections:
               icon: custom/relativity
             - name: "Google Cybersecurity Specialization"
               icon: devicon/google
-            - name: "OSCP (In progress)"
-              icon: custom/oscp
 
     design:
       style: grid
@@ -294,10 +292,6 @@ sections:
       title: "Open to Opportunities"
       text: |-
         I'm currently seeking **graduate cybersecurity roles**, internships, or early-career opportunities in **GRC, Forensics, Cloud Security, or Blue Team operations**.
-      button:
-        text: 'Download Resume'
-        url: uploads/resume.pdf
-        new_tab: true
     design:
       card:
         # Light mode: soft pastel theme gradient | Dark mode: rich deep gradient

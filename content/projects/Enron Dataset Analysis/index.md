@@ -5,6 +5,7 @@ summary: This project explores the Enron email dataset (~517,000 emails) to unco
 tags:
   - eDiscovery
   - Forensics
+  - GRC
 tech_stack:
   - Python
   - Pandas 
